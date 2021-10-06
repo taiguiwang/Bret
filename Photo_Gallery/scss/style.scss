@@ -1,0 +1,44 @@
+$color--frame: lighten(#EAEBE5, 5%);
+$color--background: #006064;
+$color--shadow: rgba(0,0,0,0.54);
+
+body {
+  background-color: $color--background;
+  margin: 0;
+}
+
+.polaroid { 
+  border: 1rem solid $color--frame;
+  border-bottom: 5rem solid $color--frame;
+  width: 40vw;
+  min-width: 18rem;
+  height: 40vw;
+  min-height: 18rem;
+  box-shadow: 1rem 1rem 1rem -0.5rem $color--shadow;
+  margin: 4rem auto;
+  text-align: right;
+  position: relative;
+  transition: all 250ms ease;
+  
+  &__image {
+    max-width: 100%;
+    margin: 0;
+  }
+  &__caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 0.5rem;
+  }
+  
+  &--rotate-right {
+    transform: rotate(03deg);
+  }
+
+  &--rotate-left {
+    transform: rotate(-04deg);
+  }
+
+  &:hover {
+    top: -1rem;
+    cursor: pointer;
+  }
+}
