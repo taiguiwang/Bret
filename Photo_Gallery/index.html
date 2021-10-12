@@ -25,7 +25,7 @@
             </button>
         </div>
         <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
-        <div class="collapse navbar-collapse">
+        <div class=" navbar-collapse" style="display: inline;">
             <ul class="nav navbar-nav">
                 <li>
                     <a href="../index.html">首页</a>
@@ -79,14 +79,38 @@
         </div>
 
     </div>
-
+    <script src="./jquert.js"></script>
     <script>
-        var toggleBtn = document.querySelector('.navbar-toggle')
-        var collapsedElm = document.querySelector('.navbar-collapse')
-        toggleBtn.addEventListener('click', function() {
-            collapsedElm.classList.toggle('collapse')
+        // var toggleBtn = document.querySelector('.navbar-toggle');
+        // var collapsedElm = document.querySelector('.navbar-collapse');
+        // toggleBtn.addEventListener('click', function() {
+        //     collapsedElm.classList.toggle('collapse');
+        // })
+
+        document.querySelector(".navbar-toggle").addEventListener("click", dianJi);
+
+        function dianJi() {
+            if (document.querySelector('.navbar-collapse').style.display == "none") {
+                document.querySelector('.navbar-collapse').style.display = "inline";
+            } else if (document.querySelector('.navbar-collapse').style.display == "inline") {
+                document.querySelector('.navbar-collapse').style.display = "none";
+            }
+        }
+
+        $(window).scroll(function() { //开始监听滚动条
+            var top = $(document).scrollTop(); //滚动条距离顶部的高度
+            if (top > 10) {
+                document.querySelector('.navbar-collapse').style.display = "none";
+            }
+
+            if (top == 0) {
+                document.querySelector('.navbar-collapse').style.display = "inline";
+            }
+
         })
     </script>
 </body>
+
+</html>
 
 </html>
