@@ -98,6 +98,16 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#portfolio {
+    background-color: #006064;
+    padding: 35px 0 0 0;
+}
+
+#Albums {
+    background-color: #006064;
+    color: white;
+}
+
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -749,6 +759,7 @@ progress {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
@@ -1362,7 +1373,7 @@ progress {
     }
     .col-lg-4 {
         flex: 0 0 auto;
-        width: 33.33333333%;
+        width: 30%;
     }
     .col-lg-5 {
         flex: 0 0 auto;

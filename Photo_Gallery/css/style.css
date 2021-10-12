@@ -1,41 +1,179 @@
-body {
-    background-color: #006064;
-    margin: 0;
-}
-
-.polaroid {
-    border: 1rem solid #f6f6f3;
-    border-bottom: 5rem solid #f6f6f3;
-    width: 40vw;
-    min-width: 18rem;
-    height: 40vw;
-    min-height: 18rem;
-    box-shadow: 1rem 1rem 1rem -0.5rem rgba(0, 0, 0, 0.54);
-    margin: 4rem auto;
-    text-align: right;
-    position: relative;
-    transition: all 250ms ease;
-}
-
-.polaroid__image {
-    max-width: 100%;
-    margin: 0;
-}
-
-.polaroid__caption {
-    font-family: 'Rock Salt', cursive;
-    padding: 0.5rem;
-}
-
-.polaroid--rotate-right {
-    transform: rotate(3deg);
-}
-
-.polaroid--rotate-left {
-    transform: rotate(-4deg);
-}
-
-.polaroid:hover {
-    top: -1rem;
-    cursor: pointer;
-}
+    body {
+        background-color: #006064;
+        margin: 0;
+    }
+    
+    .polaroid {
+        border: 1rem solid #f6f6f3;
+        border-bottom: 5rem solid #f6f6f3;
+        width: 40vw;
+        min-width: 18rem;
+        height: 40vw;
+        min-height: 18rem;
+        box-shadow: 1rem 1rem 1rem -0.5rem rgba(0, 0, 0, 0.54);
+        margin: 4rem auto;
+        text-align: right;
+        position: relative;
+        transition: all 250ms ease;
+    }
+    
+    .polaroid__image {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .polaroid__caption {
+        font-family: 'Rock Salt', cursive;
+        padding: 0.5rem;
+    }
+    
+    .polaroid--rotate-right {
+        transform: rotate(3deg);
+    }
+    
+    .polaroid--rotate-left {
+        transform: rotate(-4deg);
+        margin-top: 130px;
+    }
+    
+    .polaroid:hover {
+        top: -1rem;
+        cursor: pointer;
+    }
+    /**/
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    ul {
+        margin: 0px 50px 0px 0px;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    nav {
+        height: 90px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #006064;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .navbar-header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 65px;
+    }
+    
+    .navbar-toggle {
+        height: 37px;
+        display: none;
+        border: none;
+        background-color: #006064;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    
+    .navbar-toggle span {
+        display: block;
+        width: 2em;
+        margin: 3px 0;
+        border-bottom: 2px solid #fff;
+    }
+    
+    .navbar-brand {
+        display: block;
+        color: white;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    
+    .navbar-brand:hover {
+        text-decoration: none;
+    }
+    
+    .navbar-nav li {
+        display: inline-block;
+        padding: .5em;
+        background-color: #006064;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    
+    li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14.4px;
+        font-weight: 700;
+    }
+    
+    li a:hover {
+        text-decoration: none;
+    }
+    
+    .weiZi {
+        width: 40px;
+        height: 40px;
+    }
+    
+    @media(max-width: 768px) {
+        nav {
+            display: block;
+        }
+        .navbar-header {
+            margin-top: 6.5px;
+        }
+        .navbar-toggle {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .collapse {
+            display: none;
+        }
+        .navbar-collapse {
+            position: relative;
+            top: 26.5px;
+        }
+        .navbar-collapse li {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            ;
+            text-align: center;
+        }
+    }
+    /*内容*/
+    
+    #neiRong {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    @media(max-width: 768px) {
+        #neiRong {
+            display: block;
+        }
+    }
